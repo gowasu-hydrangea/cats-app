@@ -11,6 +11,9 @@
   </head>
 
   <body>
+    <!--ヘッダー-->
+    <%= link_to "ログアウト", destroy_customer_session_path, method: :delete %>
+    <%= link_to "ログアウト", destroy_admin_session_path, method: :delete %>
     <%= yield %>
   </body>
 </html>
