@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   
-  # get 'homes/top'
-  root to: "homes#top"
+  root to: "customers/homes#top"
+
+  namespace :customers do
+    # root to: "homes#top"
+    get 'homes/about'
+  end
   
   # devise_for :customers
   devise_for :customers, controllers: {
@@ -10,6 +14,10 @@ Rails.application.routes.draw do
     registrations: 'customers/registrations'
   }
   
+  
+  namespace :admins do
+    root to: "homes#top"
+  end
   # devise_for :admins
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
