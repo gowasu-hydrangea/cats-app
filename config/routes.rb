@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   
+  # get 'homes/top'
+  root to: "homes#top"
+  
   # devise_for :customers
   devise_for :customers, controllers: {
     sessions:      'customers/sessions',
     passwords:     'customers/passwords',
     registrations: 'customers/registrations'
   }
+  
   # devise_for :admins
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
@@ -18,4 +22,5 @@ Rails.application.routes.draw do
     resource :cat_coffee_shop_favorites, only: [:create, :destroy]
     resource :lost_cat_favorites, only: [:create, :destroy]
   end
+  
 end
