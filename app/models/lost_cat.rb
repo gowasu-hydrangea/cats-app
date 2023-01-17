@@ -6,6 +6,7 @@ class LostCat < ApplicationRecord
   # アソシエーション設定
   belongs_to :customer
   has_many :lost_cat_favorites, dependent: :destroy
+  has_many :lost_cat_comments, dependent: :destroy
   
   # バリテーション設定
   validates :lost_cat_title, presence: true
