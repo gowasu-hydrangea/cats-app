@@ -11,6 +11,7 @@ class CatCoffeeShop < ApplicationRecord
   
   # アソシエーション・関連づけ
   has_many :cat_coffee_shop_favorites, dependent: :destroy
+  has_many :cat_coffee_shop_comments, dependent: :destroy
   
   def favorited_by?(customer)
     cat_coffee_shop_favorites.exists?(customer_id: customer.id)

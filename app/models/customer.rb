@@ -8,5 +8,6 @@ class Customer < ApplicationRecord
   
   # アソシエーション・関連づけ
   has_many :cat_coffee_shop_favorites, dependent: :destroy
+  has_many :cat_coffee_shop_comments, dependent: :destroy
          
 end
