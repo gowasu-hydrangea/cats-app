@@ -16,5 +16,6 @@ Rails.application.routes.draw do
   
   resources :cat_coffee_shops, only: [:index,:show,:edit,:create,:destroy,:update] do
     resource :cat_coffee_shop_favorites, only: [:create, :destroy]
+    resource :lost_cat_favorites, only: [:create, :destroy]
   end
 end
