@@ -5,5 +5,8 @@ class Customer < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
   validates :customer_name, presence: true
+  
+  # アソシエーション・関連づけ
+  has_many :cat_coffee_shop_favorites, dependent: :destroy
          
 end
