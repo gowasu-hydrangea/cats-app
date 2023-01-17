@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_01_16_103237) do
+ActiveRecord::Schema.define(version: 2023_01_17_110317) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -52,12 +52,12 @@ ActiveRecord::Schema.define(version: 2023_01_16_103237) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "cat_caves", force: :cascade do |t|
+  create_table "cat_coffee_shops", force: :cascade do |t|
     t.integer "customer_id", null: false
-    t.string "cat_cafe_location", null: false
-    t.string "cat_cafe_title", null: false
-    t.text "cat_cafe_introduction", null: false
-    t.boolean "cat_cafe_is_published_flag", default: false, null: false
+    t.string "cat_coffee_shop_location", null: false
+    t.string "cat_coffee_shop_title", null: false
+    t.text "cat_coffee_shop_introduction", null: false
+    t.boolean "cat_coffee_shop_is_published_flag", default: false, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
