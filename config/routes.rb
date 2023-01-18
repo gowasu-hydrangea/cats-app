@@ -31,8 +31,10 @@ Rails.application.routes.draw do
     # get 'lost_cats/edit'
     # get 'lost_cats/update'
     # get 'lost_cats/destroy'
-    resources :lost_cats, only: [:new,:create,:index,:show,:edit,:update,:destroy]
+    resources :lost_cats, only: [:new,:create,:index,:show,:edit,:update,:destroy] do
       resource :lost_cat_favorites, only: [:create, :destroy]
+      resources :lost_cat_comments, only: [:create, :destroy]
+    end
     
   end
   
