@@ -36,6 +36,11 @@ Rails.application.routes.draw do
       resources :lost_cat_comments, only: [:create, :destroy]
     end
     
+    # get 'customers/index'
+    # get 'customers/show'
+    # get 'customers/edit'
+    # get 'customers/update'
+    resources :customers, only: [:index,:show,:edit,:update]
   end
   
   # devise_for :admins
