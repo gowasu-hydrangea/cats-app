@@ -1,9 +1,6 @@
 Rails.application.routes.draw do
   
   
-  namespace :admins do
-
-  end
   root to: "customers/homes#top"
   get '/about' => 'customers/homes#about'
   
@@ -44,6 +41,7 @@ Rails.application.routes.draw do
     # get 'customers/edit'
     # get 'customers/update'
     resources :customers, only: [:index, :show, :edit, :update]
+    
   end
   
   # devise_for :admins
@@ -60,11 +58,13 @@ Rails.application.routes.draw do
       # get 'cat_coffee_shops/edit'
       # get 'cat_coffee_shops/update'
       resources :cat_coffee_shops, only: [:index, :show, :edit, :update]
+      
       # get 'lost_cats/index'
       # get 'lost_cats/show'
       # get 'lost_cats/edit'
       # get 'lost_cats/update'
       resources :lost_cats, only: [:index, :show, :edit, :update]
+      
       # get 'customers/index'
       # get 'customers/show'
       # get 'customers/edit'
@@ -72,6 +72,7 @@ Rails.application.routes.draw do
       # get 'customers/unsubscribe'
       # get 'customers/withdraw'
       resources :customers, only: [:index, :show, :edit, :update, :unsubscribe, :withdraw]
+      
     end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
