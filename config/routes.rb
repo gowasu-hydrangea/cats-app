@@ -32,7 +32,7 @@ Rails.application.routes.draw do
     # get 'lost_cats/update'
     # get 'lost_cats/destroy'
     resources :lost_cats, only: [:new,:create,:index,:show,:edit,:update,:destroy]
-      # resource :lost_cat_favorites, only: [:create, :destroy]
+      resource :lost_cat_favorites, only: [:create, :destroy]
     
   end
   
