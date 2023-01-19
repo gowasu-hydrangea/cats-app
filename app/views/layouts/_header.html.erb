@@ -1,0 +1,48 @@
+<header>
+  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        
+        <%= link_to root_path, class:"nav-link text-light" do %>
+          保護猫プロジェクト
+        <% end %>
+        
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+              
+              <% if customer_signed_in? %>
+              
+                <li>
+                    マイページ
+                </li>
+                
+                <li>
+                    迷い猫情報
+                </li>
+                
+                <li>
+                    みんなの保護猫カフェ
+                </li>
+                
+                <li>
+                    ログアウトはこちら！
+                </li>
+                
+              <% else %>
+                
+                <li></li>
+                
+                <li></li>
+                
+                <li></li>
+                
+                <li></li>
+                
+              <% end %>
+          </ul>
+        </div>
+        
+    </div>
+  </nav>
+  
+</header>
