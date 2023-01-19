@@ -13,30 +13,48 @@
               <% if customer_signed_in? %>
               
                 <li>
+                    <%= link_to customers_customer_path(current_user.id), class:"nav-link text-light" do %>
                     マイページ
+                    <% end %>
                 </li>
                 
                 <li>
+                    <%= link_to customers_lost_cats_path, class:"nav-link text-light" do %>
                     迷い猫情報
+                    <% end %>
                 </li>
                 
                 <li>
+                    <%= link_to customers_cat_coffee_shops_path, class:"nav-link text-light" do %>
                     みんなの保護猫カフェ
+                    <% end %>
                 </li>
                 
                 <li>
+                    <%= link_to destroy_customer_session_path, method: :delete, class:"nav-link text-light" do %>
                     ログアウトはこちら！
+                    <% end %>
                 </li>
                 
               <% else %>
                 
-                <li></li>
+                <li>
+                    <%= link_to about_path, class:"nav-link text-light" do %>
+                    保護猫とは
+                    <% end %>
+                </li>
                 
-                <li></li>
+                <li>
+                    <%= link_to new_customer_registration_path, class:"nav-link text-light" do %>
+                    新規会員登録はこちら！
+                    <% end %>
+                </li>
                 
-                <li></li>
-                
-                <li></li>
+                <li>
+                    <%= link_to new_customer_session_path, class:"nav-link text-light" do %>
+                    すでに会員の方はこちら！
+                    <% end %>
+                </li>
                 
               <% end %>
           </ul>
